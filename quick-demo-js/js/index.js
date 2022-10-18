@@ -1,10 +1,8 @@
 /* eslint-disable*/
 // -------document events--------
 
-document.getElementById('sdkAppId').value = getQueryString('sdkAppId');
-document.getElementById('secretKey').value = getQueryString('secretKey');
-document.getElementById('userId').value = getQueryString('userId') || Math.floor(Math.random() * 1000000);
-document.getElementById('roomId').value = getQueryString('roomId') || Math.floor(Math.random() * 1000);
+initInputValues();
+
 const state = { url:window.location.href.split("?")[0] };
 window.history.pushState(state,'', 'index.html');
 

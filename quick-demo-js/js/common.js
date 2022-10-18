@@ -154,3 +154,16 @@ function reportFailedEvent({name, error, type = 'rtc', sdkAppId, roomId}) {
 		ext3: sdkAppId,
 	});
 }
+
+const CLIENT_CONFIG = {
+  sdkAppId: 1400748296,
+  secretKey: 'd9a75291cda4de955a37dbd484d6fa76cddb980a01bbde268fa05644ba8af543',
+  roomId: 777888
+};
+
+function initInputValues() {
+	document.getElementById('sdkAppId').value = getQueryString('sdkAppId') || CLIENT_CONFIG.sdkAppId;
+	document.getElementById('secretKey').value = getQueryString('secretKey') || CLIENT_CONFIG.secretKey;
+	document.getElementById('userId').value = getQueryString('userId') || Math.floor(Math.random() * 1000000);
+	document.getElementById('roomId').value = getQueryString('roomId') || CLIENT_CONFIG.roomId;	
+}
